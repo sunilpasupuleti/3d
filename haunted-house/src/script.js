@@ -30,38 +30,37 @@ loadingManager.onError = () => {
   console.log("Error occured");
 };
 const textureLoader = new THREE.TextureLoader(loadingManager);
-const doorColorTexture = textureLoader.load("/textures/door/color.jpg");
-const doorAlphaTexture = textureLoader.load("/textures/door/alpha.jpg");
+const doorColorTexture = textureLoader.load("textures/door/color.jpg");
+const doorAlphaTexture = textureLoader.load("textures/door/alpha.jpg");
 const doorAmbientOcclusionTexture = textureLoader.load(
-  "/textures/door/ambientOcclusion.jpg"
+  "textures/door/ambientOcclusion.jpg"
 );
-const doorHeightTexture = textureLoader.load("/textures/door/height.jpg");
-const doorNormalTexture = textureLoader.load("/textures/door/normal.jpg");
-const doorMetalnessTexture = textureLoader.load("/textures/door/metalness.jpg");
-const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
+const doorHeightTexture = textureLoader.load("textures/door/height.jpg");
+const doorNormalTexture = textureLoader.load("textures/door/normal.jpg");
+const doorMetalnessTexture = textureLoader.load("textures/door/metalness.jpg");
+const doorRoughnessTexture = textureLoader.load("textures/door/roughness.jpg");
 
 // Bricks Texture
-const bricksColorTexture = textureLoader.load("/textures/bricks/color.jpg");
+const bricksColorTexture = textureLoader.load("textures/bricks/color.jpg");
 const bricksAmbientOcclusionTexture = textureLoader.load(
-  "/textures/bricks/ambientOcclusion.jpg"
+  "textures/bricks/ambientOcclusion.jpg"
 );
-const bricksNormalTexture = textureLoader.load("/textures/bricks/normal.jpg");
+const bricksNormalTexture = textureLoader.load("textures/bricks/normal.jpg");
 const bricksRoughnessTexture = textureLoader.load(
-  "/textures/bricks/roughness.jpg"
+  "textures/bricks/roughness.jpg"
 );
 
 // Grass Texture
-const grassColorTexture = textureLoader.load("/textures/grass/color.jpg");
+const grassColorTexture = textureLoader.load("textures/grass/color.jpg");
 const grassAmbientOcclusionTexture = textureLoader.load(
-  "/textures/grass/ambientOcclusion.jpg"
+  "textures/grass/ambientOcclusion.jpg"
 );
-const grassNormalTexture = textureLoader.load("/textures/grass/normal.jpg");
+const grassNormalTexture = textureLoader.load("textures/grass/normal.jpg");
 const grassRoughnessTexture = textureLoader.load(
-  "/textures/grass/roughness.jpg"
+  "textures/grass/roughness.jpg"
 );
 
-// Cloud Texture
-const cloudTexture = textureLoader.load("textures/smoke.png");
+
 
 grassColorTexture.repeat.set(8, 8);
 grassAmbientOcclusionTexture.repeat.set(8, 8);
@@ -307,7 +306,7 @@ const graveMaterial = new THREE.MeshStandardMaterial({
 
 const fontLoader = new FontLoader(loadingManager);
 
-fontLoader.load("/fonts/blood.json", (font) => {
+fontLoader.load("fonts/blood.json", (font) => {
   const graveTextMaterial = new THREE.MeshStandardMaterial({
     color: "tomato",
   });
